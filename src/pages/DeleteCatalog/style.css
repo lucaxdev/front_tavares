@@ -1,0 +1,33 @@
+.Delete-content{
+    width: 100%;
+    height: 100vh;
+    background-color: teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Delete-box{
+    border-radius:10px ;
+    width: 30%;
+    height: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+b{
+    color: teal;
+}
+button{
+    border: none;
+    width: 40%;
+    height: 10%;
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+}
+button:hover{
+    background-color: orange;
+    
+}

@@ -1,0 +1,56 @@
+.Cadastro-container{
+    width: 100%;
+    height: 100vh;
+    background-color: #eeeeee;
+    display: flex;
+}
+.Cadastro-content{
+    width: 95%;
+    height: 100%;
+}
+.Cadastro-Cards{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 90%;
+    margin-left: 2%;
+    
+    
+   
+}
+.needs-validation{
+    margin-top: 1%;
+   
+}
+select{
+    width: 100%;
+    border: none;
+    border: 1px solid #ced4da;
+    color: #343a40;
+}
+app {
+    padding: 1rem;
+    color: var(--col-primary-text);
+  }
+  
+  .grey {
+    padding: 1rem;
+    background: #ccc;
+    margin-top: 6.6rem;
+  }
+  
+  .ContentBox{
+      width: 100%;
+      height: 100%;
+      background-color: violet;
+      overflow-y: scroll;
+  }
+  .botao{
+    width: 50%;
+    height: 50%;
+    margin-top: 10%;
+  }
+  .list-group-item{
+      margin-top: 0!important;
+  }

@@ -1,0 +1,73 @@
+.Listar-container{
+    width: 100%;
+    height: 100vh;
+    background-color: #eeeeee;
+    display: flex;
+}
+.Listar-content{
+    width: 95%;
+    height: 100%;
+}
+.Listar-Cards{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    height: 80%;
+    margin-left: 2%;
+    margin-top: 2%;
+    justify-content: flex-start;
+    overflow-y: auto;
+}
+#test-table-xls-button{
+    width: 20%;
+    height: 70%;
+    margin-left: 2%;
+    border-radius: 10px;
+}
+.TitleEButton{
+    width: 100%;
+    height: 10%;
+   
+    display: flex;
+    justify-content: space-between;
+}
+#ContainerLoad{
+    width: 100%;
+    height: 67%;
+}
+#Load{
+    position: absolute;
+    width: 100%;
+}
+.thead-info{
+   
+    color: teal;
+    overflow-x: scroll;
+}
+#Icon{
+    color: teal;
+}
+.fa-eye:before{
+    color: teal;
+}
+.fa-file-alt:before{
+    color: teal;
+    margin-left: 50%;
+}
+.fa-trash:before {
+    color: teal;
+    margin-left: 88%!important;
+}
+
+#Input{
+    padding: 10px;
+    
+    height: 70%;
+    border-radius: 10px ;
+    border: none;
+    
+
+}
+
+
