@@ -24,6 +24,11 @@ class Listar extends Component {
             userFixed: itens
         });
         console.log(itens)
+
+        if(this.state.useritens !==""){
+            document.getElementById("Loader").style.display = "none";
+            
+        }
     }
     updateSearch = (e) => {
         // campo de pesquisa
@@ -40,6 +45,36 @@ class Listar extends Component {
         this.setState({ useritens: newUsers });
     };
 
+    updateSearch1 = (e) => {
+        // campo de pesquisa
+        this.setState({ searchTerm: e.target.value }, () => this.filterData1());
+    };
+
+    filterData1 = () => {
+        const { searchTerm, userFixed } = this.state;
+        var re1 = new RegExp(searchTerm, "gi");
+        const newUsers = userFixed.filter(
+            (item) =>
+                item.cidade.match(re1) 
+        );
+        this.setState({ useritens: newUsers });
+    };
+
+
+    updateSearch2 = (e) => {
+        // campo de pesquisa
+        this.setState({ searchTerm: e.target.value }, () => this.filterData2());
+    };
+
+    filterData2 = () => {
+        const { searchTerm, userFixed } = this.state;
+        var re2 = new RegExp(searchTerm, "gi");
+        const newUsers = userFixed.filter(
+            (item) =>
+                item.bairro.match(re2) 
+        );
+        this.setState({ useritens: newUsers });
+    };
     render() {
         return (
 
@@ -48,8 +83,11 @@ class Listar extends Component {
                 <div className="Listar-content">
                     <Navbar name="Lista de Consultoras" />
                     <div className="Listar-Cards">
+                        
                         <div className="TitleEButton">
                             <input id="Input" onChange={this.updateSearch} type="text" placeholder="Buscar.."></input>
+                            <input id="Input" onChange={this.updateSearch1} type="text" placeholder="Cidade.."></input>
+                            <input id="Input" onChange={this.updateSearch2} type="text" placeholder="Bairro.."></input>
 
                             <ReactHTMLTableToExcel
                                 id="test-table-xls-button"
@@ -61,7 +99,7 @@ class Listar extends Component {
 
                             {/* {this.state.searchTerm} */}
                         </div>
-
+                        <div id="Loader" class="loader"></div>
                         <table id="Table" className="table">
                             <thead className="thead-info">
                                 <tr id="Scroll">
@@ -73,6 +111,8 @@ class Listar extends Component {
 
                                     <th scope="col">Catálogo</th>
                                     <th scope="col">Parceiros</th>
+                                    <th scope="col">Bairro</th>
+                                    <th scope="col">Cidade</th>
 
 
 
@@ -92,9 +132,9 @@ class Listar extends Component {
                                         <td>{item.catalog}</td>
 
                                         <td>{item.pointsupport}</td>
+                                        <td>{item.bairro}</td>
 
-
-
+                                        <td>{item.cidade}</td>
 
 
 
